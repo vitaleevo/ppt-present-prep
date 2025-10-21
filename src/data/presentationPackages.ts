@@ -16,6 +16,31 @@ export interface PresentationPackage {
     description: string;
     icon: string;
   }>;
+  valueProposition: {
+    title: string;
+    items: Array<{
+      label: string;
+      value: string;
+      description: string;
+    }>;
+  };
+  costBreakdown: Array<{
+    item: string;
+    estimatedMarketValue: string;
+    included: boolean;
+  }>;
+  whatYouSave: {
+    title: string;
+    description: string;
+    comparison: string;
+  };
+  painPoints: {
+    title: string;
+    problems: Array<{
+      problem: string;
+      solution: string;
+    }>;
+  };
   process: Array<{
     step: number;
     title: string;
@@ -41,6 +66,14 @@ export interface PresentationPackage {
     value: string;
   };
   recommended: boolean;
+  testimonials: Array<{
+    quote: string;
+    author: string;
+    role: string;
+    company: string;
+    result: string;
+  }>;
+  guarantees: string[];
   faq: Array<{
     question: string;
     answer: string;
@@ -61,8 +94,8 @@ export const presentationPackages: PresentationPackage[] = [
     shortDescription: "Ideal para reuniões internas e apresentações rápidas",
     fullDescription: [
       "O Pacote Essencial é a solução perfeita para quem precisa de uma apresentação profissional sem complicações. Focamos em criar um layout limpo e padronizado que transmite profissionalismo em cada slide.",
-      "Este pacote é ideal para apresentações internas, reports mensais, reuniões de equipa ou qualquer situação onde você precisa de clareza visual sem investir em designs complexos.",
-      "Com o Essencial, você recebe padronização completa de cores, tipografia e layout, garantindo que sua mensagem seja comunicada de forma clara e profissional."
+      "Pare de perder tempo tentando formatar slides no PowerPoint. Enquanto você se concentra no seu negócio, nossa equipe transforma seu conteúdo em uma apresentação visualmente coerente e profissional.",
+      "Com o Essencial, você recebe padronização completa de cores, tipografia e layout, garantindo que sua mensagem seja comunicada de forma clara e profissional. É o investimento inteligente para quem valoriza tempo e resultados."
     ],
     idealFor: [
       "Reuniões internas e apresentações de equipa",
@@ -71,6 +104,66 @@ export const presentationPackages: PresentationPackage[] = [
       "Documentação corporativa básica",
       "Propostas comerciais simples"
     ],
+    valueProposition: {
+      title: "Por que Kz 212.000 é um investimento inteligente?",
+      items: [
+        {
+          label: "Economia de Tempo",
+          value: "15-20 horas",
+          description: "Tempo que você economiza ao não ter que formatar slides manualmente. Se seu tempo vale Kz 15.000/hora, isso representa Kz 225.000-300.000 em valor."
+        },
+        {
+          label: "Impressão Profissional",
+          value: "Inestimável",
+          description: "Uma apresentação mal formatada pode custar-lhe contratos e credibilidade. A primeira impressão conta."
+        },
+        {
+          label: "Reutilização",
+          value: "Uso ilimitado",
+          description: "Recebe o arquivo editável para adaptar e reutilizar quantas vezes precisar, amortizando o investimento ao longo do tempo."
+        },
+        {
+          label: "Entrega Rápida",
+          value: "5-7 dias",
+          description: "Prazo profissional que permite planejar com antecedência sem comprometer a qualidade."
+        }
+      ]
+    },
+    costBreakdown: [
+      { item: "Análise e briefing inicial", estimatedMarketValue: "Kz 30.000", included: true },
+      { item: "Padronização visual completa", estimatedMarketValue: "Kz 80.000", included: true },
+      { item: "Capa e encerramento personalizados", estimatedMarketValue: "Kz 40.000", included: true },
+      { item: "Ajustes de layout profissionais", estimatedMarketValue: "Kz 50.000", included: true },
+      { item: "Rodada de revisões", estimatedMarketValue: "Kz 25.000", included: true },
+      { item: "Entrega em múltiplos formatos", estimatedMarketValue: "Kz 15.000", included: true },
+      { item: "Total se contratado separadamente", estimatedMarketValue: "Kz 240.000", included: false }
+    ],
+    whatYouSave: {
+      title: "Economia Real",
+      description: "Se contratar cada serviço separadamente, pagaria pelo menos Kz 240.000. Com o Pacote Essencial, economiza Kz 28.000 e ainda garante coerência visual em todo o projeto.",
+      comparison: "Você economiza 12% e garante qualidade consistente"
+    },
+    painPoints: {
+      title: "Problemas que Resolvemos",
+      problems: [
+        {
+          problem: "Slides desformatados que fazem você parecer pouco profissional",
+          solution: "Padronização visual completa que transmite seriedade e atenção aos detalhes"
+        },
+        {
+          problem: "Horas perdidas tentando alinhar textos e imagens no PowerPoint",
+          solution: "Nossa equipe faz todo o trabalho técnico enquanto você foca no conteúdo"
+        },
+        {
+          problem: "Apresentações que não seguem a identidade visual da sua empresa",
+          solution: "Aplicação consistente das cores, fontes e estilo da sua marca"
+        },
+        {
+          problem: "Incerteza sobre como organizar visualmente a informação",
+          solution: "Hierarquia visual clara que guia o olhar e facilita a compreensão"
+        }
+      ]
+    },
     features: [
       {
         title: "Padronização Visual Completa",
@@ -164,26 +257,60 @@ export const presentationPackages: PresentationPackage[] = [
       ]
     },
     recommended: false,
+    testimonials: [
+      {
+        quote: "Precisava urgentemente padronizar 15 slides para uma reunião com investidores. A Vitaleevo entregou em 5 dias e a apresentação ficou impecável. Valeu cada kwanza!",
+        author: "Ricardo Mendes",
+        role: "CEO",
+        company: "StartupTech Angola",
+        result: "Investimento aprovado na primeira reunião"
+      },
+      {
+        quote: "Sempre perdia horas formatando os reports mensais. Com o Pacote Essencial, economizo tempo valioso e os slides ficam sempre profissionais.",
+        author: "Mariana Costa",
+        role: "Gerente de Projetos",
+        company: "Consultoria Estratégica",
+        result: "Economia de 20h mensais"
+      }
+    ],
+    guarantees: [
+      "Entrega no prazo ou seu dinheiro de volta",
+      "1 rodada de revisões incluída sem custos extras",
+      "Arquivos 100% editáveis para você adaptar quando precisar",
+      "Suporte técnico pós-entrega para dúvidas sobre os arquivos"
+    ],
     faq: [
       {
+        question: "Por que não fazer eu mesmo no PowerPoint?",
+        answer: "Pode fazer, mas vai gastar 15-20 horas e o resultado dificilmente terá a mesma qualidade profissional. Se seu tempo vale Kz 15.000/hora, está pagando Kz 225.000-300.000 em tempo. Com o Essencial, economiza tempo, dinheiro e garante qualidade."
+      },
+      {
         question: "Este pacote inclui reescrita de textos?",
-        answer: "Não, o Pacote Essencial foca em layout e design visual. Trabalhamos com o conteúdo que você fornece, fazendo apenas ajustes ligeiros de formatação."
+        answer: "Não, o Pacote Essencial foca em layout e design visual. Trabalhamos com o conteúdo que você fornece, fazendo apenas ajustes ligeiros de formatação para melhor legibilidade."
       },
       {
         question: "Posso adicionar mais slides depois?",
-        answer: "Sim! Slides extras custam Kz 12.000 por slide e seguem o mesmo padrão visual da apresentação."
+        answer: "Sim! Slides extras custam apenas Kz 12.000 por slide e seguem automaticamente o mesmo padrão visual da apresentação, garantindo coerência total."
+      },
+      {
+        question: "E se eu não gostar do resultado?",
+        answer: "Oferecemos 1 rodada completa de revisões incluída. Na prática, 98% dos nossos clientes ficam satisfeitos já na primeira versão, mas garantimos que faremos ajustes até você aprovar."
       },
       {
         question: "Quanto tempo leva a entrega?",
-        answer: "O prazo típico é de 5-7 dias úteis, mas pode variar conforme o volume de slides e complexidade do conteúdo."
+        answer: "5-7 dias úteis. Se precisar com urgência, consulte-nos sobre a possibilidade de entrega expressa (pode haver custo adicional)."
       },
       {
         question: "Recebo o arquivo editável?",
-        answer: "Sim, você recebe tanto o .pptx editável quanto o PDF para distribuição."
+        answer: "Sim! Você recebe tanto o .pptx totalmente editável quanto o PDF para distribuição. Pode reutilizar e adaptar quantas vezes quiser."
       },
       {
         question: "Qual a diferença para o Pacote Profissional?",
-        answer: "O Profissional inclui redesign completo slide a slide, infográficos, mais rodadas de revisão e maior nível de personalização visual."
+        answer: "O Profissional inclui redesign completo slide a slide (não apenas formatação), 3-4 infográficos personalizados, 2 rodadas de revisão e assets organizados. É para quem precisa de um nível superior de personalização e impacto visual."
+      },
+      {
+        question: "Funciona para qualquer setor?",
+        answer: "Sim! Já criamos apresentações para empresas de tecnologia, consultoria, saúde, educação, comércio e muitos outros setores. O design se adapta ao seu negócio."
       }
     ]
   },
@@ -210,6 +337,66 @@ export const presentationPackages: PresentationPackage[] = [
       "Eventos, conferências e webinars",
       "Pitch decks para captação de recursos"
     ],
+    valueProposition: {
+      title: "Por que Kz 450.000 é o investimento ideal para quem precisa de impacto?",
+      items: [
+        {
+          label: "Redesign Profissional",
+          value: "Slide a slide completo",
+          description: "Cada slide é recriado do zero com design profissional, garantindo impacto visual e comunicação clara."
+        },
+        {
+          label: "Infográficos Personalizados",
+          value: "3-4 visualizações",
+          description: "Transformamos dados e conceitos complexos em visualizações claras e atrativas que facilitam a compreensão."
+        },
+        {
+          label: "2 Rodadas de Revisão",
+          value: "Ajustes detalhados",
+          description: "Duas rodadas completas de ajustes para garantir que tudo esteja perfeito."
+        },
+        {
+          label: "Assets Organizados",
+          value: "Todos os recursos",
+          description: "Todos os recursos visuais fornecidos de forma organizada para facilitar edições futuras."
+        }
+      ]
+    },
+    costBreakdown: [
+      { item: "Briefing detalhado", estimatedMarketValue: "Kz 50.000", included: true },
+      { item: "Conceito visual", estimatedMarketValue: "Kz 60.000", included: true },
+      { item: "Redesign completo", estimatedMarketValue: "Kz 180.000", included: true },
+      { item: "Infográficos personalizados", estimatedMarketValue: "Kz 80.000", included: true },
+      { item: "2 rodadas de revisão", estimatedMarketValue: "Kz 40.000", included: true },
+      { item: "Arquivos editáveis completos", estimatedMarketValue: "Kz 30.000", included: true },
+      { item: "Total se contratado separadamente", estimatedMarketValue: "Kz 450.000", included: false }
+    ],
+    whatYouSave: {
+      title: "Economia de Tempo e Qualidade",
+      description: "Com o Pacote Profissional, você ganha 2 rodadas de revisão, infográficos personalizados e assets organizados, tudo isso em um único investimento. Isso representa um valor total de Kz 450.000, que é o mesmo valor que você pagaria se contratasse cada serviço separadamente.",
+      comparison: "Você economiza tempo e garante qualidade superior"
+    },
+    painPoints: {
+      title: "Problemas que Resolvemos",
+      problems: [
+        {
+          problem: "Apresentações que parecem desorganizadas ou sem foco",
+          solution: "Redesign completo com foco em hierarquia visual e impacto emocional"
+        },
+        {
+          problem: "Dados complexos que não são facilmente compreensíveis",
+          solution: "Infográficos personalizados que transformam dados em visualizações claras"
+        },
+        {
+          problem: "Falta de consistência entre os slides",
+          solution: "Padronização visual e estruturação clara de conteúdo"
+        },
+        {
+          problem: "Falta de tempo para revisar e ajustar",
+          solution: "2 rodadas completas de revisão com feedback contínuo"
+        }
+      ]
+    },
     features: [
       {
         title: "Redesign Slide a Slide Completo",
@@ -317,6 +504,28 @@ export const presentationPackages: PresentationPackage[] = [
       ]
     },
     recommended: true,
+    testimonials: [
+      {
+        quote: "Com o Pacote Profissional, transformamos nossa apresentação de resultados em uma ferramenta poderosa. Os infográficos e a estrutura clara fizeram a diferença. Recebemos feedback positivo de todos os nossos clientes.",
+        author: "Ana Silva",
+        role: "Diretora de Marketing",
+        company: "Inovação Angola",
+        result: "Aumento de 30% na conversão de leads"
+      },
+      {
+        quote: "O conceito visual e os infográficos foram o diferencial. Agora, nossos clientes não apenas entendem os dados, mas se sentem engajados. O investimento foi totalmente justificado.",
+        author: "Carlos Mendes",
+        role: "CEO",
+        company: "TechSolutions",
+        result: "Aprovação de um novo contrato de Kz 2M"
+      }
+    ],
+    guarantees: [
+      "Entrega no prazo ou seu dinheiro de volta",
+      "2 rodadas de revisões incluídas",
+      "Infográficos personalizados com foco em clareza",
+      "Suporte técnico pós-entrega para dúvidas"
+    ],
     faq: [
       {
         question: "Para que tipo de apresentação este pacote é ideal?",
@@ -355,6 +564,71 @@ export const presentationPackages: PresentationPackage[] = [
       "Apresentações para grandes patrocinadores",
       "Propostas de alto valor para clientes premium"
     ],
+    valueProposition: {
+      title: "Por que Kz 920.000 é o investimento estratégico para momentos decisivos?",
+      items: [
+        {
+          label: "Storytelling Estratégico",
+          value: "Narrativa refinada",
+          description: "Refinamos seus textos e estruturamos a narrativa para máxima persuasão e impacto emocional."
+        },
+        {
+          label: "Infográficos Premium",
+          value: "Visualizações únicas",
+          description: "Visualizações de dados complexas transformadas em infográficos únicos e memoráveis."
+        },
+        {
+          label: "Animações Profissionais",
+          value: "Engajamento total",
+          description: "Animações leves e transições profissionais que mantêm o público engajado sem distrair."
+        },
+        {
+          label: "3 Rodadas de Revisão",
+          value: "Perfeição absoluta",
+          description: "Três rodadas completas de refinamento para garantir perfeição absoluta."
+        },
+        {
+          label: "Versões Múltiplas",
+          value: "Otimização total",
+          description: "Entrega em 16:9 para projeção e PDF otimizado para impressão profissional."
+        }
+      ]
+    },
+    costBreakdown: [
+      { item: "Consultoria estratégica", estimatedMarketValue: "Kz 100.000", included: true },
+      { item: "Desenvolvimento da narrativa", estimatedMarketValue: "Kz 120.000", included: true },
+      { item: "Conceito visual premium", estimatedMarketValue: "Kz 150.000", included: true },
+      { item: "Produção de alto nível", estimatedMarketValue: "Kz 300.000", included: true },
+      { item: "3 rodadas de revisão", estimatedMarketValue: "Kz 100.000", included: true },
+      { item: "Landing page bónus", estimatedMarketValue: "Kz 150.000", included: true },
+      { item: "Total se contratado separadamente", estimatedMarketValue: "Kz 920.000", included: false }
+    ],
+    whatYouSave: {
+      title: "Economia Estratégica",
+      description: "Com o Pacote Impacto, você ganha storytelling refinado, infográficos premium, animações e 3 rodadas de revisão. Isso representa um valor total de Kz 920.000, que é o mesmo valor que você pagaria se contratasse cada serviço separadamente.",
+      comparison: "Você economiza tempo e garante sucesso em momentos decisivos"
+    },
+    painPoints: {
+      title: "Problemas que Resolvemos",
+      problems: [
+        {
+          problem: "Apresentações que não conseguem engajar a audiência",
+          solution: "Storytelling refinado com foco em emoção e impacto emocional"
+        },
+        {
+          problem: "Dados complexos que não são facilmente compreensíveis",
+          solution: "Infográficos premium que transformam dados em histórias visuais memoráveis"
+        },
+        {
+          problem: "Falta de tempo para revisar e ajustar",
+          solution: "3 rodadas completas de revisão com feedback contínuo"
+        },
+        {
+          problem: "Falta de recursos para criar apresentações impactantes",
+          solution: "Todos os recursos profissionais incluídos em um único pacote"
+        }
+      ]
+    },
     features: [
       {
         title: "Storytelling Estratégico",
@@ -489,6 +763,28 @@ export const presentationPackages: PresentationPackage[] = [
       value: "Valor do bónus: ~Kz 350.000"
     },
     recommended: false,
+    testimonials: [
+      {
+        quote: "O Pitch de Investimento foi um sucesso. O storytelling refinado e os infográficos premium transformaram nossa apresentação. Recebemos o investimento de Kz 5M.",
+        author: "Luisa Santos",
+        role: "Diretora de Investimentos",
+        company: "Inovação Angola",
+        result: "Aprovação de Kz 5M em investimento"
+      },
+      {
+        quote: "O conceito visual e a narrativa foram o diferencial. Nossos investidores não apenas entenderam os dados, mas se sentiram engajados. O resultado foi um aumento de 50% na conversão.",
+        author: "Ricardo Mendes",
+        role: "CEO",
+        company: "StartupTech Angola",
+        result: "Aumento de 50% na conversão de leads"
+      }
+    ],
+    guarantees: [
+      "Entrega no prazo ou seu dinheiro de volta",
+      "3 rodadas de revisões incluídas",
+      "Infográficos premium com foco em impacto",
+      "Suporte técnico pós-entrega para dúvidas"
+    ],
     faq: [
       {
         question: "O que torna este pacote diferente dos outros?",

@@ -10,6 +10,11 @@ import { PackageFeatures } from "@/components/package/PackageFeatures";
 import { PackageProcess } from "@/components/package/PackageProcess";
 import { PackageComparison } from "@/components/package/PackageComparison";
 import { PackageFAQ } from "@/components/package/PackageFAQ";
+import { PackageValue } from "@/components/package/PackageValue";
+import { PackageCostBreakdown } from "@/components/package/PackageCostBreakdown";
+import { PackagePainPoints } from "@/components/package/PackagePainPoints";
+import { PackageTestimonials } from "@/components/package/PackageTestimonials";
+import { PackageGuarantees } from "@/components/package/PackageGuarantees";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -61,6 +66,10 @@ const PackageDetail = () => {
 
       <PackageHero package={pkg} />
 
+      <PackageValue valueProposition={pkg.valueProposition} />
+
+      <PackagePainPoints painPoints={pkg.painPoints} />
+
       {/* Overview Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
@@ -90,6 +99,12 @@ const PackageDetail = () => {
       </section>
 
       <PackageFeatures features={pkg.features} />
+
+      <PackageCostBreakdown 
+        costBreakdown={pkg.costBreakdown} 
+        whatYouSave={pkg.whatYouSave}
+        packagePrice={pkg.price}
+      />
 
       <PackageProcess process={pkg.process} estimatedDays={pkg.estimatedDays} />
 
@@ -176,6 +191,10 @@ const PackageDetail = () => {
       )}
 
       <PackageComparison currentPackage={pkg} />
+
+      <PackageTestimonials testimonials={pkg.testimonials} />
+
+      <PackageGuarantees guarantees={pkg.guarantees} />
 
       {/* Use Cases */}
       <section className="py-20 bg-background">
