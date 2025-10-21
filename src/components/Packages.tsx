@@ -22,7 +22,7 @@ const packages = [
     name: "Profissional",
     subtitle: "Redesign Pro",
     price: "Kz 450.000",
-    description: "Recomendado para a Associação de Bebidas",
+    description: "Ideal para empresas e associações",
     features: [
       "Redesign slide a slide",
       "3–4 infográficos simples",
