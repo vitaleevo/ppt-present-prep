@@ -4,22 +4,22 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "A Vitaleevo transformou completamente a nossa presença online. O site ficou perfeito e as vendas aumentaram significativamente.",
-    author: "Carlos Silva",
-    role: "CEO, TechStart Angola",
-    company: "TechStart"
+    quote: "A Vitaleevo transformou nossa apresentação em uma ferramenta de vendas. Fechamos 3 novos contratos logo após usar o material criado por eles!",
+    author: "Carlos Mendes",
+    role: "Diretor Comercial",
+    company: "Empresa de Tecnologia"
   },
   {
-    quote: "Profissionais excepcionais! A apresentação que criaram para o nosso pitch de investimento foi decisiva para conseguirmos o financiamento.",
+    quote: "O profissionalismo deles é impressionante. Nossa apresentação para investidores ficou tão boa que conseguimos o financiamento que precisávamos.",
     author: "Ana Ferreira",
-    role: "Fundadora, SaudePlus",
-    company: "SaudePlus"
+    role: "CEO & Fundadora",
+    company: "Startup de Saúde"
   },
   {
-    quote: "A gestão de redes sociais da Vitaleevo triplicou o nosso engajamento. Finalmente temos uma presença digital consistente e profissional.",
+    quote: "Finalmente uma equipa que entende que apresentações não são só bonitas, mas precisam comunicar e converter. O resultado superou todas as expectativas!",
     author: "João Santos",
-    role: "Diretor de Marketing, ModaOnline",
-    company: "ModaOnline AO"
+    role: "Gestor de Marketing",
+    company: "Agência Digital"
   }
 ];
 

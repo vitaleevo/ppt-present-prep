@@ -197,18 +197,18 @@ export const presentationPackages: PresentationPackage[] = [
     priceNumeric: 450000,
     extraSlidePrice: "Kz 30.000",
     extraSlidePriceNumeric: 30000,
-    shortDescription: "Recomendado para a Associação de Bebidas",
+    shortDescription: "Perfeito para quem precisa impressionar clientes e parceiros com design profissional",
     fullDescription: [
       "O Pacote Profissional é nossa opção mais equilibrada, oferecendo um redesign completo que transforma sua apresentação em uma ferramenta de comunicação poderosa. Cada slide é recriado do zero com atenção aos detalhes visuais e hierarquia de informação.",
-      "Recomendado especialmente para a Associação de Bebidas e organizações que precisam impressionar clientes, parceiros ou investidores. Este pacote inclui infográficos personalizados que transformam dados complexos em visualizações claras e memoráveis.",
-      "Com duas rodadas completas de revisão, garantimos que cada detalhe esteja alinhado com suas expectativas e necessidades de comunicação."
+      "Ideal para empresas e profissionais que precisam transmitir credibilidade e impactar sua audiência. Este pacote inclui infográficos personalizados que transformam dados complexos em visualizações claras e memoráveis.",
+      "Com duas rodadas completas de revisão, garantimos que cada detalhe esteja alinhado com suas expectativas e objetivos de comunicação. É a escolha perfeita para quem busca excelência sem excesso."
     ],
     idealFor: [
-      "Apresentações comerciais para clientes importantes",
+      "Apresentações comerciais para clientes e investidores",
       "Propostas de parceria e patrocínio",
-      "Apresentações institucionais de associações",
-      "Events e conferências corporativas",
-      "Pitch decks para investidores (nível intermediário)"
+      "Apresentações institucionais e corporativas",
+      "Eventos, conferências e webinars",
+      "Pitch decks para captação de recursos"
     ],
     features: [
       {
@@ -295,11 +295,11 @@ export const presentationPackages: PresentationPackage[] = [
       ]
     },
     useCases: [
-      "Apresentação institucional da Associação de Bebidas",
-      "Proposta de patrocínio para eventos",
-      "Pitch para novos parceiros comerciais",
-      "Apresentação em conferências do setor",
-      "Report anual com dados e resultados"
+      "Apresentação de resultados e relatórios estratégicos",
+      "Proposta comercial para grandes contas",
+      "Pitch para investidores ou parceiros",
+      "Apresentação em eventos e conferências",
+      "Lançamento de produtos ou serviços"
     ],
     comparison: {
       advantages: [
@@ -319,24 +319,16 @@ export const presentationPackages: PresentationPackage[] = [
     recommended: true,
     faq: [
       {
-        question: "Por que é recomendado para a Associação de Bebidas?",
-        answer: "Este pacote oferece o equilíbrio ideal entre qualidade profissional e investimento, incluindo infográficos essenciais para apresentar dados do setor de forma clara e impactante."
+        question: "Para que tipo de apresentação este pacote é ideal?",
+        answer: "Este pacote é perfeito para apresentações comerciais, propostas de parceria, eventos corporativos e qualquer situação onde você precisa causar uma excelente impressão profissional."
       },
       {
         question: "Quantos infográficos estão incluídos?",
-        answer: "Estão incluídos 3-4 infográficos simples. Se precisar de mais ou de infográficos premium, recomendamos o Pacote Impacto."
+        answer: "Estão incluídos 3-4 infográficos simples. Se precisar de mais ou de infográficos premium com animações, recomendamos o Pacote Impacto."
       },
       {
         question: "Posso solicitar alterações depois das 2 revisões?",
-        answer: "Sim, mas alterações adicionais serão cobradas à parte. Por isso, recomendamos feedback detalhado em cada rodada."
-      },
-      {
-        question: "Este pacote inclui animações?",
-        answer: "Não, animações leves e transições estão disponíveis apenas no Pacote Impacto."
-      },
-      {
-        question: "Quanto tempo de antecedência preciso solicitar?",
-        answer: "Recomendamos pelo menos 3 semanas antes da data que precisa da apresentação, para garantir tempo adequado de produção e revisões."
+        answer: "Sim, mas alterações adicionais serão cobradas à parte. Por isso, recomendamos que você forneça feedback detalhado em cada rodada de revisão."
       }
     ]
   },
@@ -493,7 +485,7 @@ export const presentationPackages: PresentationPackage[] = [
     },
     bonus: {
       title: "Landing Page Premium Incluída",
-      description: "Como bónus especial, você recebe uma landing page completa e responsiva com todas as informações da sua associação, incluindo domínio personalizado, hospedagem profissional por 1 ano e 3 contas de email corporativo.",
+      description: "Como bónus especial, você recebe uma landing page completa e responsiva com todas as informações da sua organização, incluindo domínio personalizado, hospedagem profissional por 1 ano e 3 contas de email corporativo.",
       value: "Valor do bónus: ~Kz 350.000"
     },
     recommended: false,

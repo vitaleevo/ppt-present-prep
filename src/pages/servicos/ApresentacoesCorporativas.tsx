@@ -126,7 +126,7 @@ const packages = [
     subtitle: "Redesign Pro",
     slug: "profissional",
     price: "Kz 450.000",
-    description: "Recomendado para a Associação de Bebidas",
+    description: "Perfeito para quem precisa impressionar clientes e parceiros",
     features: [
       "Redesign slide a slide completo",
       "3–4 infográficos simples",
@@ -154,7 +154,7 @@ const packages = [
     ],
     extraSlide: "Kz 70.000/slide",
     recommended: false,
-    bonus: "Landing page com todas as informações da associação + domínio e hospedagem de 1 ano + 3 emails corporativos"
+    bonus: "Landing page responsiva completa + domínio personalizado + hospedagem de 1 ano + 3 emails corporativos"
   }
 ];
 
@@ -193,7 +193,7 @@ const ApresentacoesCorporativas = () => {
               <div>
                 <h3 className="font-bold text-lg mb-2">Design Visual Impactante</h3>
                 <p className="text-muted-foreground">
-                  Transformar 11 slides em uma apresentação clara, bonita e fácil de entender.
+                  Transformar sua apresentação em uma ferramenta de comunicação clara, bonita e impactante.
                 </p>
               </div>
             </Card>
@@ -205,7 +205,7 @@ const ApresentacoesCorporativas = () => {
               <div>
                 <h3 className="font-bold text-lg mb-2">Organização e Padronização</h3>
                 <p className="text-muted-foreground">
-                  Organizar as ideias, padronizar a aparência e destacar o que é mais importante.
+                  Estruturar suas ideias com uma hierarquia visual clara, destacando o que realmente importa para sua audiência.
                 </p>
               </div>
             </Card>
@@ -215,9 +215,9 @@ const ApresentacoesCorporativas = () => {
                 <Sparkles className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <h3 className="font-bold text-lg mb-2">Entrega Completa</h3>
+                <h3 className="font-bold text-lg mb-2">Entrega Completa e Editável</h3>
                 <p className="text-muted-foreground">
-                  Entregar ficheiro .pptx editável + PDF, tudo pronto para usar.
+                  Você recebe os ficheiros .pptx totalmente editáveis + PDF para impressão. Tudo pronto para usar e adaptar sempre que precisar.
                 </p>
               </div>
             </Card>
