@@ -9,6 +9,7 @@ import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { getServiceBySlug, getCategoryBySlug } from "@/data/servicesData";
 import { Check, Clock, MessageCircle, ArrowRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import CorporatePresentationsSection from "@/components/services/CorporatePresentations";
 
 const ServiceDetail = () => {
   const { categorySlug, serviceSlug } = useParams();
@@ -68,6 +69,11 @@ const ServiceDetail = () => {
           </div>
         </div>
       </Section>
+
+      {/* Conteúdo específico para Apresentações Corporativas */}
+      {service.slug === "apresentacoes-corporativas" && (
+        <CorporatePresentationsSection />
+      )}
 
       {/* O que está incluído */}
       <Section>
