@@ -14,6 +14,7 @@ import BlogPost from "./pages/BlogPost";
 import Contactos from "./pages/Contactos";
 import ApresentacoesCorporativas from "./pages/servicos/ApresentacoesCorporativas";
 import PackageDetail from "./pages/servicos/PackageDetail";
+import IdentidadeVisual from "./pages/servicos/IdentidadeVisual";
 import ServiceDetail from "./pages/servicos/ServiceDetail";
 import CategoryServices from "./pages/servicos/CategoryServices";
 import NotFound from "./pages/NotFound";
@@ -42,6 +43,7 @@ const App = () => {
               <Route path="/servicos/:categorySlug" element={<CategoryServices />} />
               <Route path="/servicos/apresentacoes-corporativas" element={<ApresentacoesCorporativas />} />
               <Route path="/servicos/apresentacoes-corporativas/:packageSlug" element={<PackageDetail />} />
+              <Route path="/servicos/design-criativo/identidade-visual" element={<IdentidadeVisual />} />
               <Route path="/servicos/:categorySlug/:serviceSlug" element={<ServiceDetail />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/blog" element={<Blog />} />
