@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
+import heroBg from "@/assets/hero-bg.jpg";
 
 export const Hero = () => {
   const scrollToPacotes = () => {
@@ -8,7 +9,8 @@ export const Hero = () => {
 
   return (
     <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-[image:var(--gradient-hero)] opacity-10"></div>
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${heroBg})` }}></div>
+      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col items-center text-center space-y-8">

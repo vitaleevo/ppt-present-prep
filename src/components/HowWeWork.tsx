@@ -1,5 +1,6 @@
 import { Section, SectionTitle } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
+import howWeWorkBg from "@/assets/how-we-work-bg.jpg";
 
 const steps = [
   {
@@ -26,8 +27,10 @@ const steps = [
 
 export const HowWeWork = () => {
   return (
-    <Section className="bg-accent/20">
-      <div className="container mx-auto px-4">
+    <Section className="relative bg-accent/20 overflow-hidden">
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${howWeWorkBg})` }}></div>
+      <div className="absolute inset-0 bg-background/90 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <SectionTitle>Como Trabalhamos</SectionTitle>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mt-12">

@@ -2,6 +2,7 @@ import { Section, SectionTitle } from "@/components/ui/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import nextStepsBg from "@/assets/next-steps-bg.jpg";
 
 const steps = [
   "Escolha o pacote que faz mais sentido para a vossa apresentação",
@@ -11,8 +12,10 @@ const steps = [
 
 export const NextSteps = () => {
   return (
-    <Section className="bg-[image:var(--gradient-hero)] text-primary-foreground">
-      <div className="container mx-auto px-4">
+    <Section className="relative bg-[image:var(--gradient-hero)] text-primary-foreground overflow-hidden">
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${nextStepsBg})` }}></div>
+      <div className="absolute inset-0 bg-primary/75 backdrop-blur-sm"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <SectionTitle className="text-primary-foreground">Próximos Passos</SectionTitle>
         
         <Card className="max-w-3xl mx-auto mt-12 p-8 bg-background/95 backdrop-blur">
