@@ -18,6 +18,8 @@ import IdentidadeVisual from "./pages/servicos/IdentidadeVisual";
 import ServiceDetail from "./pages/servicos/ServiceDetail";
 import CategoryServices from "./pages/servicos/CategoryServices";
 import NotFound from "./pages/NotFound";
+import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
+import TermosUso from "./pages/TermosUso";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -49,6 +51,8 @@ const App = () => {
               <Route path="/blog" element={<Blog />} />
               <Route path="/blog/:slug" element={<BlogPost />} />
               <Route path="/contactos" element={<Contactos />} />
+              <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
+              <Route path="/termos-uso" element={<TermosUso />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

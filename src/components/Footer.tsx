@@ -120,6 +120,15 @@ export const Footer = () => {
         </div>
         
         <div className="border-t border-border mt-8 pt-8 text-center text-sm text-muted-foreground">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-4">
+            <a href="/politica-privacidade" className="hover:text-primary transition-colors">
+              Política de Privacidade
+            </a>
+            <span className="hidden md:inline">•</span>
+            <a href="/termos-uso" className="hover:text-primary transition-colors">
+              Termos e Condições
+            </a>
+          </div>
           <p>&copy; {new Date().getFullYear()} Vitaleevo Comércio e Serviços. Todos os direitos reservados.</p>
         </div>
       </div>
