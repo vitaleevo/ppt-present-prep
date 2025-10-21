@@ -388,7 +388,7 @@ export const presentationPackages: PresentationPackage[] = [
       },
       {
         title: "Landing Page Incluída",
-        description: "Bónus especial: landing page completa com informações da associação + domínio + hospedagem + emails.",
+        description: "Bónus especial: landing page completa com informações da sua organização + domínio + hospedagem + emails.",
         icon: "Globe"
       }
     ],
