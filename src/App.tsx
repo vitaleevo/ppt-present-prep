@@ -1,9 +1,10 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ErrorBoundary from "./components/ErrorBoundary";
 import Home from "./pages/Home";
 import Sobre from "./pages/Sobre";
 import Servicos from "./pages/Servicos";
@@ -26,27 +27,29 @@ const App = () => {
   }));
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/sobre" element={<Sobre />} />
-            <Route path="/servicos" element={<Servicos />} />
-            <Route path="/servicos/:categorySlug" element={<CategoryServices />} />
-            <Route path="/servicos/apresentacoes-corporativas" element={<ApresentacoesCorporativas />} />
-            <Route path="/servicos/:categorySlug/:serviceSlug" element={<ServiceDetail />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:slug" element={<BlogPost />} />
-            <Route path="/contactos" element={<Contactos />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/sobre" element={<Sobre />} />
+              <Route path="/servicos" element={<Servicos />} />
+              <Route path="/servicos/:categorySlug" element={<CategoryServices />} />
+              <Route path="/servicos/apresentacoes-corporativas" element={<ApresentacoesCorporativas />} />
+              <Route path="/servicos/:categorySlug/:serviceSlug" element={<ServiceDetail />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+              <Route path="/contactos" element={<Contactos />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 };
 
