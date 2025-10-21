@@ -42,36 +42,36 @@ const CategoryServices = () => {
       ]} />
       
       <Section className="bg-[image:var(--gradient-primary)]">
-        <div className="container mx-auto px-4 text-center text-white">
-          <div className="h-16 w-16 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-6">
-            <Icon className="h-8 w-8" />
+        <div className="container mx-auto px-4 md:px-6 text-center text-white">
+          <div className="h-12 w-12 md:h-16 md:w-16 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4 md:mb-6">
+            <Icon className="h-6 w-6 md:h-8 md:w-8" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 px-2">
             {category.category}
           </h1>
-          <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl opacity-90 max-w-3xl mx-auto px-2">
             {category.description}
           </p>
         </div>
       </Section>
 
       <Section>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 md:px-6">
           <SectionTitle>Nossos Serviços de {category.category}</SectionTitle>
           
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-8 md:mt-12">
             {category.services.map((service) => (
               <Card key={service.slug} className="hover:shadow-lg transition-all hover:-translate-y-1">
-                <CardHeader>
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <CardTitle className="text-2xl mb-2">{service.name}</CardTitle>
-                      <div className="text-2xl font-bold bg-clip-text text-transparent bg-[image:var(--gradient-primary)]">
+                <CardHeader className="space-y-3">
+                  <div className="flex flex-col sm:flex-row items-start justify-between gap-3">
+                    <div className="flex-1">
+                      <CardTitle className="text-xl md:text-2xl mb-2">{service.name}</CardTitle>
+                      <div className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-[image:var(--gradient-primary)]">
                         {service.price}
                       </div>
                     </div>
                   </div>
-                  <CardDescription className="text-base">
+                  <CardDescription className="text-sm md:text-base">
                     {service.shortDescription}
                   </CardDescription>
                 </CardHeader>
@@ -90,7 +90,7 @@ const CategoryServices = () => {
                       </p>
                     )}
                   </div>
-                  <Button asChild className="w-full gap-2">
+                  <Button asChild className="w-full gap-2 text-sm md:text-base">
                     <Link to={`/servicos/${categorySlug}/${service.slug}`}>
                       Ver Detalhes Completos
                       <ArrowRight className="h-4 w-4" />

@@ -43,7 +43,7 @@ const IdentidadeVisual = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 z-0"
           style={{
@@ -53,26 +53,26 @@ const IdentidadeVisual = () => {
           }}
         />
         
-        <div className="container mx-auto px-4 py-20 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 py-12 md:py-20 relative z-10">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 animate-fade-in">
               {pkg.name}
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-200 mb-2">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-2">
               {pkg.subtitle}
             </p>
             
-            <p className="text-lg text-gray-300 mb-8 italic">
+            <p className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 italic px-2">
               {pkg.tagline}
             </p>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 inline-block mb-6">
-              <p className="text-sm text-gray-200 mb-2">Investimento</p>
-              <p className="text-5xl font-bold mb-2">{pkg.price}</p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-6 inline-block mb-4 md:mb-6">
+              <p className="text-xs md:text-sm text-gray-200 mb-1 md:mb-2">Investimento</p>
+              <p className="text-3xl md:text-4xl lg:text-5xl font-bold mb-1 md:mb-2">{pkg.price}</p>
             </div>
             
-            <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base lg:text-lg text-gray-200 max-w-2xl mx-auto px-4">
               {pkg.shortDescription}
             </p>
           </div>

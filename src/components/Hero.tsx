@@ -109,7 +109,7 @@ export const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-[70vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden">
       <Carousel
         plugins={[plugin.current]}
         className="w-full h-full absolute inset-0"
@@ -128,7 +128,7 @@ export const Hero = () => {
         <CarouselContent>
           {heroSlides.map((slide, index) => (
             <CarouselItem key={slide.id} className="min-w-full">
-              <div className="relative min-h-[90vh] flex items-center justify-center">
+              <div className="relative min-h-[70vh] md:min-h-[90vh] flex items-center justify-center py-8 md:py-0">
                 {/* Background Image */}
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-all duration-1000" 
@@ -139,14 +139,14 @@ export const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/85 to-background/90 backdrop-blur-sm"></div>
                 
                 {/* Content */}
-                <div className="container mx-auto px-4 relative z-10">
-                  <div className="flex flex-col items-center text-center space-y-6 md:space-y-8">
+                <div className="container mx-auto px-4 md:px-6 relative z-10">
+                  <div className="flex flex-col items-center text-center space-y-4 md:space-y-6 lg:space-y-8">
                     {/* Icon or Logo */}
                     {index === 0 ? (
                       <img 
                         src={logo} 
                         alt="Vitaleevo" 
-                        className="w-32 h-32 md:w-48 md:h-48 object-contain animate-in fade-in zoom-in duration-700"
+                        className="w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 object-contain animate-in fade-in zoom-in duration-700"
                       />
                     ) : (
                       <div className="text-primary animate-in fade-in zoom-in duration-700">
@@ -155,26 +155,26 @@ export const Hero = () => {
                     )}
                     
                     {/* Title */}
-                    <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-clip-text text-transparent bg-[image:var(--gradient-primary)] animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 max-w-5xl">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-clip-text text-transparent bg-[image:var(--gradient-primary)] animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 max-w-5xl px-2">
                       {slide.title}
                     </h1>
                     
                     {/* Subtitle */}
-                    <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-foreground/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 max-w-4xl">
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-foreground/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 max-w-4xl px-2">
                       {slide.subtitle}
                     </p>
                     
                     {/* Description */}
-                    <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 px-4">
                       {slide.description}
                     </p>
                     
                     {/* Highlights */}
-                    <div className="flex flex-wrap justify-center gap-3 md:gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
+                    <div className="flex flex-wrap justify-center gap-2 md:gap-3 lg:gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400 px-2">
                       {slide.highlights.map((highlight, idx) => (
                         <div 
                           key={idx}
-                          className="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-sm md:text-base text-foreground/80 backdrop-blur-sm"
+                          className="px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 text-xs md:text-sm lg:text-base text-foreground/80 backdrop-blur-sm"
                         >
                           {highlight}
                         </div>
@@ -182,10 +182,10 @@ export const Hero = () => {
                     </div>
                     
                     {/* CTAs */}
-                    <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">
+                    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 w-full sm:w-auto px-4">
                       <Button 
                         size="lg" 
-                        className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 bg-[image:var(--gradient-primary)] hover:opacity-90 transition-opacity shadow-[var(--shadow-elegant)]"
+                        className="text-sm md:text-base lg:text-lg px-5 md:px-6 lg:px-8 py-4 md:py-5 lg:py-6 bg-[image:var(--gradient-primary)] hover:opacity-90 transition-opacity shadow-[var(--shadow-elegant)] w-full sm:w-auto"
                         onClick={() => handleCtaClick(slide.ctaLink)}
                       >
                         {slide.ctaText}
@@ -194,7 +194,7 @@ export const Hero = () => {
                         <Button 
                           size="lg" 
                           variant="outline" 
-                          className="text-base md:text-lg px-6 md:px-8 py-5 md:py-6 border-2 border-primary hover:bg-accent"
+                          className="text-sm md:text-base lg:text-lg px-5 md:px-6 lg:px-8 py-4 md:py-5 lg:py-6 border-2 border-primary hover:bg-accent w-full sm:w-auto"
                           onClick={slide.secondaryCtaAction}
                         >
                           {slide.secondaryCtaText}
@@ -208,19 +208,19 @@ export const Hero = () => {
           ))}
         </CarouselContent>
         
-        {/* Navigation Arrows */}
-        <CarouselPrevious className="left-4 md:left-8 bg-background/50 backdrop-blur-sm hover:bg-background/80 border-primary/20" />
-        <CarouselNext className="right-4 md:right-8 bg-background/50 backdrop-blur-sm hover:bg-background/80 border-primary/20" />
+        {/* Navigation Arrows - Hidden on mobile */}
+        <CarouselPrevious className="hidden md:flex left-4 lg:left-8 bg-background/50 backdrop-blur-sm hover:bg-background/80 border-primary/20" />
+        <CarouselNext className="hidden md:flex right-4 lg:right-8 bg-background/50 backdrop-blur-sm hover:bg-background/80 border-primary/20" />
       </Carousel>
       
       {/* Dots Navigation */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+      <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-1.5 md:gap-2">
         {heroSlides.map((_, index) => (
           <button
             key={index}
-            className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-300 ${
+            className={`w-1.5 h-1.5 md:w-2 md:h-2 lg:w-3 lg:h-3 rounded-full transition-all duration-300 ${
               index === currentSlide 
-                ? 'bg-primary w-8 md:w-12' 
+                ? 'bg-primary w-6 md:w-8 lg:w-12' 
                 : 'bg-primary/30 hover:bg-primary/50'
             }`}
             onClick={() => {
