@@ -3,6 +3,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, FileText, Palette, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
+import corpWhatWeDoeBg from "@/assets/corp-what-we-do-bg.jpg";
+import corpPackagesBg from "@/assets/corp-packages-bg.jpg";
 
 interface PackageCardProps {
   name: string;
@@ -142,8 +144,10 @@ export const CorporatePresentations = () => {
   return (
     <>
       {/* O que vamos fazer */}
-      <Section>
-        <div className="container mx-auto px-4">
+      <Section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${corpWhatWeDoeBg})` }}></div>
+        <div className="absolute inset-0 bg-background/90 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <SectionTitle>O que vamos fazer</SectionTitle>
           <div className="max-w-4xl mx-auto mt-12 grid gap-6">
             <Card className="p-6 flex items-start gap-4 hover:shadow-[var(--shadow-elegant)] transition-all">
@@ -186,8 +190,10 @@ export const CorporatePresentations = () => {
       </Section>
 
       {/* Pacotes */}
-      <Section id="pacotes" className="bg-muted/30">
-        <div className="container mx-auto px-4">
+      <Section id="pacotes" className="relative bg-muted/30 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${corpPackagesBg})` }}></div>
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 relative z-10">
           <SectionTitle>Os Nossos Pacotes</SectionTitle>
           <SectionSubtitle>
             Escolha o pacote que melhor se adequa às necessidades da sua apresentação
