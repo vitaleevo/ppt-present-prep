@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Contactos from "./pages/Contactos";
 import ApresentacoesCorporativas from "./pages/servicos/ApresentacoesCorporativas";
+import PackageDetail from "./pages/servicos/PackageDetail";
 import ServiceDetail from "./pages/servicos/ServiceDetail";
 import CategoryServices from "./pages/servicos/CategoryServices";
 import NotFound from "./pages/NotFound";
@@ -40,6 +41,7 @@ const App = () => {
               <Route path="/servicos" element={<Servicos />} />
               <Route path="/servicos/:categorySlug" element={<CategoryServices />} />
               <Route path="/servicos/apresentacoes-corporativas" element={<ApresentacoesCorporativas />} />
+              <Route path="/servicos/apresentacoes-corporativas/:packageSlug" element={<PackageDetail />} />
               <Route path="/servicos/:categorySlug/:serviceSlug" element={<ServiceDetail />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/blog" element={<Blog />} />

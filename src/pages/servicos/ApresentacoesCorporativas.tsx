@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
+import { useNavigate } from "react-router-dom";
 import { Comparison } from "@/components/Comparison";
 import { Extras } from "@/components/Extras";
 import { HowWeWork } from "@/components/HowWeWork";
@@ -25,6 +26,7 @@ interface PackageCardProps {
   extraSlide: string;
   recommended?: boolean;
   bonus?: string;
+  slug: string;
 }
 
 const PackageCard = ({ 
@@ -35,8 +37,10 @@ const PackageCard = ({
   features, 
   extraSlide,
   recommended = false,
-  bonus
+  bonus,
+  slug
 }: PackageCardProps) => {
+  const navigate = useNavigate();
   return (
     <Card 
       className={cn(
@@ -90,6 +94,7 @@ const PackageCard = ({
             : "bg-[image:var(--gradient-secondary)] hover:opacity-90"
         )}
         size="lg"
+        onClick={() => navigate(`/servicos/apresentacoes-corporativas/${slug}`)}
       >
         Escolher Pacote
       </Button>
@@ -102,6 +107,7 @@ const packages = [
   {
     name: "Essencial",
     subtitle: "Layout Clean",
+    slug: "essencial",
     price: "Kz 212.000",
     description: "Ideal para reuniões internas e apresentações rápidas",
     features: [
@@ -118,6 +124,7 @@ const packages = [
   {
     name: "Profissional",
     subtitle: "Redesign Pro",
+    slug: "profissional",
     price: "Kz 450.000",
     description: "Recomendado para a Associação de Bebidas",
     features: [
@@ -134,6 +141,7 @@ const packages = [
   {
     name: "Impacto",
     subtitle: "Storytelling + Animação",
+    slug: "impacto",
     price: "Kz 920.000",
     description: "Ideal para pitch de patrocínio, keynote e lançamentos",
     features: [
@@ -231,6 +239,7 @@ const ApresentacoesCorporativas = () => {
                 key={index}
                 name={pkg.name}
                 subtitle={pkg.subtitle}
+                slug={pkg.slug}
                 price={pkg.price}
                 description={pkg.description}
                 features={pkg.features}
