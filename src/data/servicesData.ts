@@ -113,7 +113,7 @@ export const servicesData: ServiceCategory[] = [
         slug: "identidade-visual",
         price: "Kz 340.000",
         shortDescription: "Logótipo profissional + Manual de marca completo para posicionar o seu negócio",
-        description: "Uma identidade visual forte é a base para qualquer negócio que quer ser levado a sério. Criamos logótipos memoráveis e manuais de marca completos que garantem consistência em todas as aplicações.",
+        description: "Uma identidade visual forte é a base para qualquer negócio que quer ser levado a sério. Criamos logótipos profissionais e manuais de marca completos que garantem consistência em todas as aplicações.",
         features: [
           "Pesquisa de mercado e concorrência",
           "Briefing criativo detalhado",
@@ -150,7 +150,7 @@ export const servicesData: ServiceCategory[] = [
         slug: "apresentacoes-corporativas",
         price: "A partir de Kz 212.000",
         shortDescription: "Slides profissionais em 3 níveis: Essencial, Profissional e Impacto",
-        description: "Transformamos suas ideias em apresentações visuais impactantes. Oferecemos 3 pacotes adaptados às suas necessidades e orçamento.",
+        description: "Transformamos suas ideias em apresentações visuais profissionais. Oferecemos 3 pacotes adaptados às suas necessidades e orçamento.",
         features: [
           "3 pacotes disponíveis (Essencial, Profissional, Impacto)",
           "Design limpo e profissional",

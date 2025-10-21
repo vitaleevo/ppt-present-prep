@@ -11,7 +11,6 @@ import { PackageProcess } from "@/components/package/PackageProcess";
 import { PackageComparison } from "@/components/package/PackageComparison";
 import { PackageFAQ } from "@/components/package/PackageFAQ";
 import { PackageValue } from "@/components/package/PackageValue";
-import { PackageCostBreakdown } from "@/components/package/PackageCostBreakdown";
 import { PackagePainPoints } from "@/components/package/PackagePainPoints";
 import { PackageTestimonials } from "@/components/package/PackageTestimonials";
 import { PackageGuarantees } from "@/components/package/PackageGuarantees";
@@ -99,12 +98,6 @@ const PackageDetail = () => {
       </section>
 
       <PackageFeatures features={pkg.features} />
-
-      <PackageCostBreakdown 
-        costBreakdown={pkg.costBreakdown} 
-        whatYouSave={pkg.whatYouSave}
-        packagePrice={pkg.price}
-      />
 
       <PackageProcess process={pkg.process} estimatedDays={pkg.estimatedDays} />
 

@@ -45,7 +45,7 @@ Projeções otimistas demais afastam investidores. Seja realista, mostre seus n�
 
 ## Conclusão
 
-Uma boa apresentação é aquela que conta uma história coerente, com dados sólidos e visual profissional. Se precisa de ajuda, a Vitaleevo está aqui para transformar suas ideias em slides impactantes.
+Uma boa apresentação é aquela que conta uma história coerente, com dados sólidos e visual profissional. Se precisa de ajuda, a Vitaleevo está aqui para transformar suas ideias em slides poderosos.
     `,
     category: "Design",
     author: "Equipa Vitaleevo",

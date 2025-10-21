@@ -327,7 +327,7 @@ export const presentationPackages: PresentationPackage[] = [
     shortDescription: "Perfeito para quem precisa impressionar clientes e parceiros com design profissional",
     fullDescription: [
       "O Pacote Profissional é nossa opção mais equilibrada, oferecendo um redesign completo que transforma sua apresentação em uma ferramenta de comunicação poderosa. Cada slide é recriado do zero com atenção aos detalhes visuais e hierarquia de informação.",
-      "Ideal para empresas e profissionais que precisam transmitir credibilidade e impactar sua audiência. Este pacote inclui infográficos personalizados que transformam dados complexos em visualizações claras e memoráveis.",
+      "Ideal para empresas e profissionais que precisam transmitir credibilidade e impactar sua audiência. Este pacote inclui infográficos personalizados que transformam dados complexos em visualizações claras e atraentes.",
       "Com duas rodadas completas de revisão, garantimos que cada detalhe esteja alinhado com suas expectativas e objetivos de comunicação. É a escolha perfeita para quem busca excelência sem excesso."
     ],
     idealFor: [
@@ -554,7 +554,7 @@ export const presentationPackages: PresentationPackage[] = [
     shortDescription: "Ideal para pitch de patrocínio, keynote e lançamentos",
     fullDescription: [
       "O Pacote Impacto é nossa solução premium, projetada para os momentos mais importantes da sua organização. Combinamos design excepcional com storytelling estratégico, criando apresentações que não apenas informam, mas inspiram e convencem.",
-      "Este pacote vai além do visual: refinamos sua narrativa, estruturamos seu conteúdo para máximo impacto e criamos infográficos premium que transformam dados complexos em histórias visuais memoráveis. Animações sutis e transições profissionais mantêm sua audiência engajada do início ao fim.",
+      "Este pacote vai além do visual: refinamos sua narrativa, estruturamos seu conteúdo para máximo impacto e criamos infográficos premium que transformam dados complexos em histórias visuais claras. Animações sutis e transições profissionais mantêm sua audiência engajada do início ao fim.",
       "Ideal para pitches de investimento, keynotes em grandes eventos, lançamentos de produtos importantes ou qualquer momento onde o sucesso da sua apresentação pode definir o futuro de um projeto ou parceria."
     ],
     idealFor: [
@@ -575,7 +575,7 @@ export const presentationPackages: PresentationPackage[] = [
         {
           label: "Infográficos Premium",
           value: "Visualizações únicas",
-          description: "Visualizações de dados complexas transformadas em infográficos únicos e memoráveis."
+          description: "Visualizações de dados complexas transformadas em infográficos únicos e profissionais."
         },
         {
           label: "Animações Profissionais",
@@ -617,14 +617,14 @@ export const presentationPackages: PresentationPackage[] = [
         },
         {
           problem: "Dados complexos que não são facilmente compreensíveis",
-          solution: "Infográficos premium que transformam dados em histórias visuais memoráveis"
+          solution: "Infográficos premium que transformam dados em histórias visuais claras"
         },
         {
           problem: "Falta de tempo para revisar e ajustar",
           solution: "3 rodadas completas de revisão com feedback contínuo"
         },
         {
-          problem: "Falta de recursos para criar apresentações impactantes",
+          problem: "Falta de recursos para criar apresentações de alto nível",
           solution: "Todos os recursos profissionais incluídos em um único pacote"
         }
       ]
@@ -637,7 +637,7 @@ export const presentationPackages: PresentationPackage[] = [
       },
       {
         title: "Infográficos Premium Personalizados",
-        description: "Visualizações de dados complexas transformadas em infográficos únicos e memoráveis.",
+        description: "Visualizações de dados complexas transformadas em infográficos únicos e profissionais.",
         icon: "TrendingUp"
       },
       {
@@ -744,7 +744,7 @@ export const presentationPackages: PresentationPackage[] = [
     comparison: {
       advantages: [
         "Storytelling refinado para máxima persuasão",
-        "Infográficos premium únicos e memoráveis",
+        "Infográficos premium únicos e profissionais",
         "Animações profissionais que engajam",
         "3 rodadas de revisão para perfeição",
         "Bónus: Landing page + domínio + emails",
