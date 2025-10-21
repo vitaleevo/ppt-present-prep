@@ -13,8 +13,8 @@ import Autoplay from "embla-carousel-autoplay";
 import { useRef } from "react";
 
 export const Hero = () => {
-  const scrollToPacotes = () => {
-    document.getElementById('pacotes')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToServicos = () => {
+    document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const plugin = useRef(
@@ -68,9 +68,9 @@ export const Hero = () => {
             <Button 
               size="lg" 
               className="text-lg px-8 py-6 bg-[image:var(--gradient-primary)] hover:opacity-90 transition-opacity shadow-[var(--shadow-elegant)]"
-              onClick={scrollToPacotes}
+              onClick={scrollToServicos}
             >
-              Ver Pacotes
+              Ver Serviços
             </Button>
             <Button 
               size="lg" 

@@ -9,7 +9,6 @@ import { Stats } from "@/components/shared/Stats";
 import { Testimonial } from "@/components/shared/Testimonial";
 import { CallToAction } from "@/components/shared/CallToAction";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
-import { Packages } from "@/components/Packages";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -19,7 +18,7 @@ const Home = () => {
       <Navbar />
       <Hero />
       
-      <Section>
+      <Section id="servicos">
         <div className="container mx-auto px-4">
           <SectionTitle>Nossos Serviços</SectionTitle>
           <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
@@ -53,7 +52,6 @@ const Home = () => {
         </div>
       </Section>
 
-      <Packages />
       <Stats />
       <Testimonial />
       <CallToAction />
