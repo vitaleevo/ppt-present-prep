@@ -20,6 +20,7 @@ import CategoryServices from "./pages/servicos/CategoryServices";
 import NotFound from "./pages/NotFound";
 import PoliticaPrivacidade from "./pages/PoliticaPrivacidade";
 import TermosUso from "./pages/TermosUso";
+import TestRemoteDb from "./pages/TestRemoteDb";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -53,6 +54,7 @@ const App = () => {
               <Route path="/contactos" element={<Contactos />} />
               <Route path="/politica-privacidade" element={<PoliticaPrivacidade />} />
               <Route path="/termos-uso" element={<TermosUso />} />
+              <Route path="/test-remote-db" element={<TestRemoteDb />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

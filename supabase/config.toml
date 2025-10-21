@@ -1,1 +1,16 @@
 project_id = "rjdzmaidbyzqwikkddpt"
+
+[functions.test-remote-db]
+verify_jwt = false
+
+[functions.get-remote-data]
+verify_jwt = false
+
+[functions.insert-remote-data]
+verify_jwt = false
+
+[functions.update-remote-data]
+verify_jwt = false
+
+[functions.delete-remote-data]
+verify_jwt = false
