@@ -11,6 +11,7 @@ import { Label } from "@/components/ui/label";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, MessageCircle, Globe, Facebook, Instagram } from "lucide-react";
+import contactHeroBg from "@/assets/contact-hero-bg.jpg";
 
 const Contactos = () => {
   const { toast } = useToast();
@@ -68,13 +69,19 @@ const Contactos = () => {
       <Navbar />
       <Breadcrumbs items={[{ label: "Contactos" }]} />
       
+      <Section className="relative bg-[image:var(--gradient-primary)] text-primary-foreground overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${contactHeroBg})` }}></div>
+        <div className="absolute inset-0 bg-primary/75 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Entre em Contacto</h1>
+          <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
+            Estamos prontos para ouvir suas ideias e transformá-las em realidade
+          </p>
+        </div>
+      </Section>
+
       <Section>
         <div className="container mx-auto px-4">
-          <SectionTitle>Entre em Contacto</SectionTitle>
-          <p className="text-center text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
-            Estamos prontos para ouvir suas ideias e transformá-las em realidade. Escolha a forma de contacto que preferir.
-          </p>
-
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Formulário */}
             <Card>

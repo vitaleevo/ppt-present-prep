@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { CallToAction } from "@/components/shared/CallToAction";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { portfolioData, categories } from "@/data/portfolioData";
+import portfolioHeroBg from "@/assets/portfolio-hero-bg.jpg";
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -22,13 +23,19 @@ const Portfolio = () => {
       <Navbar />
       <Breadcrumbs items={[{ label: "Portfolio" }]} />
       
-      <Section>
-        <div className="container mx-auto px-4">
-          <SectionTitle>Nosso Portfolio</SectionTitle>
-          <p className="text-center text-lg text-muted-foreground max-w-3xl mx-auto mb-12">
+      <Section className="relative bg-[image:var(--gradient-primary)] text-primary-foreground overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${portfolioHeroBg})` }}></div>
+        <div className="absolute inset-0 bg-primary/75 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Nosso Portfolio</h1>
+          <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
             Conheça alguns dos projetos que desenvolvemos para nossos clientes
           </p>
+        </div>
+      </Section>
 
+      <Section>
+        <div className="container mx-auto px-4">
           {/* Filtros */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {categories.map((category) => (

@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { CallToAction } from "@/components/shared/CallToAction";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
 import { Target, Eye, Heart, Award, Users, Zap } from "lucide-react";
+import aboutHeroBg from "@/assets/about-hero-bg.jpg";
 
 const Sobre = () => {
   return (
@@ -13,10 +14,12 @@ const Sobre = () => {
       <Navbar />
       <Breadcrumbs items={[{ label: "Sobre" }]} />
       
-      <Section>
-        <div className="container mx-auto px-4">
-          <SectionTitle>Sobre a Vitaleevo</SectionTitle>
-          <p className="text-center text-lg text-muted-foreground max-w-3xl mx-auto">
+      <Section className="relative bg-[image:var(--gradient-primary)] text-primary-foreground overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${aboutHeroBg})` }}></div>
+        <div className="absolute inset-0 bg-primary/75 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Sobre a Vitaleevo</h1>
+          <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto">
             Somos uma agência digital angolana especializada em transformar negócios através de soluções criativas, estratégicas e tecnológicas.
           </p>
         </div>

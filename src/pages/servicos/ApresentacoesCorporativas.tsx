@@ -13,6 +13,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, FileText, Palette, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
+import corpHeroBg from "@/assets/corp-hero-bg.jpg";
 
 // Componente de Card de Pacote específico para esta página
 interface PackageCardProps {
@@ -159,8 +160,10 @@ const ApresentacoesCorporativas = () => {
         { label: "Apresentações Corporativas" }
       ]} />
       
-      <Section className="bg-[image:var(--gradient-primary)]">
-        <div className="container mx-auto px-4 text-center text-white">
+      <Section className="relative bg-[image:var(--gradient-primary)] text-primary-foreground overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${corpHeroBg})` }}></div>
+        <div className="absolute inset-0 bg-primary/75 backdrop-blur-sm"></div>
+        <div className="container mx-auto px-4 text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Apresentações Corporativas Profissionais
           </h1>
