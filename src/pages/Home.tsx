@@ -9,6 +9,7 @@ import { Stats } from "@/components/shared/Stats";
 import { Testimonial } from "@/components/shared/Testimonial";
 import { CallToAction } from "@/components/shared/CallToAction";
 import { WhatsAppButton } from "@/components/shared/WhatsAppButton";
+import { Packages } from "@/components/Packages";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -52,6 +53,7 @@ const Home = () => {
         </div>
       </Section>
 
+      <Packages />
       <Stats />
       <Testimonial />
       <CallToAction />
