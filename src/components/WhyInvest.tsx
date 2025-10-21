@@ -5,18 +5,18 @@ import { CheckCircle2, Users, Clock } from "lucide-react";
 const benefits = [
   {
     icon: CheckCircle2,
-    title: "Clareza e Compreensão",
-    description: "Ajuda quem assiste a entender rápido — menos texto confuso, mais clareza."
+    title: "Clareza na Comunicação",
+    description: "Quem assiste entende melhor e mais rápido. Sem confusão, direto ao ponto."
   },
   {
     icon: Users,
-    title: "Profissionalismo",
-    description: "Transmite profissionalismo da Associação diante de parceiros e investidores."
+    title: "Imagem Profissional",
+    description: "Passa uma boa imagem para parceiros, clientes e investidores."
   },
   {
     icon: Clock,
-    title: "Economia de Tempo",
-    description: "Economiza tempo da equipa — já fica tudo alinhado e pronto para uso."
+    title: "Poupa Tempo",
+    description: "A equipa não precisa de se preocupar com design — fica tudo pronto para usar."
   }
 ];
 
@@ -24,7 +24,7 @@ export const WhyInvest = () => {
   return (
     <Section className="bg-accent/30">
       <div className="container mx-auto px-4">
-        <SectionTitle>Por que investir numa boa apresentação?</SectionTitle>
+        <SectionTitle>Por que ter slides bem feitos?</SectionTitle>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => {

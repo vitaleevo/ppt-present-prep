@@ -19,11 +19,11 @@ export const Hero = () => {
           />
           
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold bg-clip-text text-transparent bg-[image:var(--gradient-primary)] animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
-            Transforme Suas Apresentações em Experiências Memoráveis
+            Apresentações que Comunicam Melhor
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
-            Design profissional de slides para empresas, associações e empreendedores que querem impressionar
+            Design profissional de slides para empresas, associações e empreendedores em Angola
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500">

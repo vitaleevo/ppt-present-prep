@@ -4,15 +4,15 @@ import { Card } from "@/components/ui/card";
 const comparisons = [
   {
     name: "Essencial",
-    points: ["Rápido e direto", "Custo mais baixo", "Sem reescrever textos"]
+    points: ["Rápido e direto", "Mais económico", "Mantém os textos originais"]
   },
   {
     name: "Profissional",
-    points: ["Redesign completo", "Infográficos simples", "Ótimo custo-benefício"]
+    points: ["Redesign completo", "Infográficos simples", "Bom custo-benefício"]
   },
   {
     name: "Impacto",
-    points: ["Storytelling + animações", "Máxima qualidade", "Impacto garantido"]
+    points: ["Storytelling + animações", "Qualidade superior", "Para ocasiões especiais"]
   }
 ];
 

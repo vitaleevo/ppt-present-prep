@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const steps = [
-  "Escolham o pacote que melhor atende o objetivo da apresentação",
-  "Enviem logo, paleta de cores e conteúdos (texto e números)",
-  "Agendamos o kickoff e iniciamos o trabalho"
+  "Escolha o pacote que faz mais sentido para a vossa apresentação",
+  "Envie o logo, cores da marca e o conteúdo (textos e números)",
+  "Marcamos uma conversa rápida e começamos o trabalho"
 ];
 
 export const NextSteps = () => {

@@ -6,7 +6,7 @@ const packages = [
     name: "Essencial",
     subtitle: "Layout Clean",
     price: "Kz 212.000",
-    description: "Ideal para reuniões internas e apresentações rápidas",
+    description: "Para reuniões internas e apresentações rápidas",
     features: [
       "Padronização visual completa",
       "Capa e slide de encerramento",
@@ -22,7 +22,7 @@ const packages = [
     name: "Profissional",
     subtitle: "Redesign Pro",
     price: "Kz 450.000",
-    description: "Ideal para empresas e associações",
+    description: "Recomendado para empresas e associações",
     features: [
       "Redesign slide a slide",
       "3–4 infográficos simples",
@@ -38,14 +38,14 @@ const packages = [
     name: "Impacto",
     subtitle: "Storytelling + Animação",
     price: "Kz 920.000",
-    description: "Ideal para pitch de patrocínio e lançamentos",
+    description: "Para pitch de patrocínio e lançamentos importantes",
     features: [
       "Storytelling (refino dos textos)",
-      "Infográficos custom",
+      "Infográficos personalizados",
       "Animações leves e transições",
       "3 rodadas de revisões",
       "Versões 16:9 e PDF impressão",
-      "Máxima qualidade e impacto"
+      "Qualidade superior"
     ],
     extraSlide: "Kz 70.000/slide",
     recommended: false
@@ -56,9 +56,9 @@ export const Packages = () => {
   return (
     <Section id="pacotes">
       <div className="container mx-auto px-4">
-        <SectionTitle>Nossos Pacotes</SectionTitle>
+        <SectionTitle>Os Nossos Pacotes</SectionTitle>
         <SectionSubtitle>
-          Transforme 11 slides em uma apresentação clara, bonita e fácil de entender
+          Escolha o pacote que melhor se adequa às necessidades da sua apresentação
         </SectionSubtitle>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
