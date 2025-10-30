@@ -23,9 +23,8 @@ const benefits = [
 
 export const WhyInvest = () => {
   return (
-    <Section className="relative bg-accent/30 overflow-hidden">
-      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${whyInvestBg})` }}></div>
-      <div className="absolute inset-0 bg-background/85 backdrop-blur-sm"></div>
+    <Section className="relative overflow-hidden">
+      <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url(${whyInvestBg})` }}></div>
       <div className="container mx-auto px-4 relative z-10">
         <SectionTitle>Por que ter slides bem feitos?</SectionTitle>
         
@@ -35,13 +34,13 @@ export const WhyInvest = () => {
             return (
               <Card 
                 key={index} 
-                className="p-8 hover:shadow-[var(--shadow-elegant)] transition-all duration-300 hover:-translate-y-1 border-2"
+                className="p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-0 shadow-lg rounded-2xl bg-card"
               >
-                <div className="bg-[image:var(--gradient-primary)] w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
-                  <Icon className="w-8 h-8 text-primary-foreground" />
+                <div className="bg-primary w-14 h-14 rounded-xl flex items-center justify-center mb-6">
+                  <Icon className="w-7 h-7 text-primary-foreground" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{benefit.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
               </Card>
             );
           })}

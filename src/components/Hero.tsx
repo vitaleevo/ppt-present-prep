@@ -129,77 +129,78 @@ export const Hero = () => {
           {heroSlides.map((slide, index) => (
             <CarouselItem key={slide.id} className="min-w-full">
               <div className="relative min-h-[70vh] md:min-h-[90vh] flex items-center justify-center py-8 md:py-0">
-                {/* Background Image */}
+                {/* Background Image - Clear and Visible */}
                 <div 
                   className="absolute inset-0 bg-cover bg-center transition-all duration-1000" 
                   style={{ backgroundImage: `url(${slide.backgroundImage})` }}
                 />
                 
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/85 to-background/90 backdrop-blur-sm"></div>
-                
-                {/* Content */}
+                {/* Content Card - Airbnb Style */}
                 <div className="container mx-auto px-4 md:px-6 relative z-10">
-                  <div className="flex flex-col items-center text-center space-y-4 md:space-y-6 lg:space-y-8">
-                    {/* Icon or Logo */}
-                    {index === 0 ? (
-                      <img 
-                        src={logo} 
-                        alt="Vitaleevo" 
-                        className="w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 object-contain animate-in fade-in zoom-in duration-700"
-                      />
-                    ) : (
-                      <div className="text-primary animate-in fade-in zoom-in duration-700">
-                        {slide.icon}
-                      </div>
-                    )}
-                    
-                    {/* Title */}
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold bg-clip-text text-transparent bg-[image:var(--gradient-primary)] animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 max-w-5xl px-2">
-                      {slide.title}
-                    </h1>
-                    
-                    {/* Subtitle */}
-                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-foreground/90 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200 max-w-4xl px-2">
-                      {slide.subtitle}
-                    </p>
-                    
-                    {/* Description */}
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300 px-4">
-                      {slide.description}
-                    </p>
-                    
-                    {/* Highlights */}
-                    <div className="flex flex-wrap justify-center gap-2 md:gap-3 lg:gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400 px-2">
-                      {slide.highlights.map((highlight, idx) => (
-                        <div 
-                          key={idx}
-                          className="px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-primary/10 border border-primary/20 text-xs md:text-sm lg:text-base text-foreground/80 backdrop-blur-sm"
-                        >
-                          {highlight}
+                  <div className="max-w-3xl mx-auto">
+                    <div className="bg-background/95 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-12 lg:p-16">
+                      <div className="flex flex-col items-center text-center space-y-4 md:space-y-6">
+                        {/* Icon or Logo */}
+                        {index === 0 ? (
+                          <img 
+                            src={logo} 
+                            alt="Vitaleevo" 
+                            className="w-20 h-20 md:w-24 md:h-24 object-contain animate-in fade-in zoom-in duration-700"
+                          />
+                        ) : (
+                          <div className="text-primary animate-in fade-in zoom-in duration-700">
+                            {slide.icon}
+                          </div>
+                        )}
+                        
+                        {/* Title */}
+                        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100">
+                          {slide.title}
+                        </h1>
+                        
+                        {/* Subtitle */}
+                        <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground/80 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-200">
+                          {slide.subtitle}
+                        </p>
+                        
+                        {/* Description */}
+                        <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl animate-in fade-in slide-in-from-bottom-4 duration-700 delay-300">
+                          {slide.description}
+                        </p>
+                        
+                        {/* Highlights */}
+                        <div className="flex flex-wrap justify-center gap-2 md:gap-3 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-400">
+                          {slide.highlights.map((highlight, idx) => (
+                            <div 
+                              key={idx}
+                              className="px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-accent text-xs md:text-sm font-medium text-foreground"
+                            >
+                              {highlight}
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                    
-                    {/* CTAs */}
-                    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 w-full sm:w-auto px-4">
-                      <Button 
-                        size="lg" 
-                        className="text-sm md:text-base lg:text-lg px-5 md:px-6 lg:px-8 py-4 md:py-5 lg:py-6 bg-[image:var(--gradient-primary)] hover:opacity-90 transition-opacity shadow-[var(--shadow-elegant)] w-full sm:w-auto"
-                        onClick={() => handleCtaClick(slide.ctaLink)}
-                      >
-                        {slide.ctaText}
-                      </Button>
-                      {slide.secondaryCtaText && (
-                        <Button 
-                          size="lg" 
-                          variant="outline" 
-                          className="text-sm md:text-base lg:text-lg px-5 md:px-6 lg:px-8 py-4 md:py-5 lg:py-6 border-2 border-primary hover:bg-accent w-full sm:w-auto"
-                          onClick={slide.secondaryCtaAction}
-                        >
-                          {slide.secondaryCtaText}
-                        </Button>
-                      )}
+                        
+                        {/* CTAs */}
+                        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 animate-in fade-in slide-in-from-bottom-4 duration-700 delay-500 w-full sm:w-auto pt-2">
+                          <Button 
+                            size="lg" 
+                            className="text-sm md:text-base px-6 md:px-8 py-5 md:py-6 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all w-full sm:w-auto"
+                            onClick={() => handleCtaClick(slide.ctaLink)}
+                          >
+                            {slide.ctaText}
+                          </Button>
+                          {slide.secondaryCtaText && (
+                            <Button 
+                              size="lg" 
+                              variant="outline" 
+                              className="text-sm md:text-base px-6 md:px-8 py-5 md:py-6 rounded-full font-semibold border-2 w-full sm:w-auto"
+                              onClick={slide.secondaryCtaAction}
+                            >
+                              {slide.secondaryCtaText}
+                            </Button>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -209,8 +210,8 @@ export const Hero = () => {
         </CarouselContent>
         
         {/* Navigation Arrows - Hidden on mobile */}
-        <CarouselPrevious className="hidden md:flex left-4 lg:left-8 bg-background/50 backdrop-blur-sm hover:bg-background/80 border-primary/20" />
-        <CarouselNext className="hidden md:flex right-4 lg:right-8 bg-background/50 backdrop-blur-sm hover:bg-background/80 border-primary/20" />
+        <CarouselPrevious className="hidden md:flex left-4 lg:left-8 bg-background/95 backdrop-blur-md hover:bg-background shadow-lg" />
+        <CarouselNext className="hidden md:flex right-4 lg:right-8 bg-background/95 backdrop-blur-md hover:bg-background shadow-lg" />
       </Carousel>
       
       {/* Dots Navigation */}

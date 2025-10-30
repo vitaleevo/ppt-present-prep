@@ -7,47 +7,49 @@ interface PackageHeroProps {
 
 export const PackageHero = ({ package: pkg }: PackageHeroProps) => {
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden py-20">
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/src/assets/corp-hero-bg.jpg)`,
+          backgroundImage: `url(/src/assets/corp-hero-bg.jpg)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       />
       
-      <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-4xl mx-auto text-center text-white">
-          {pkg.recommended && (
-            <Badge className="mb-4 bg-primary text-primary-foreground px-4 py-2 text-sm font-semibold">
-              ⭐ Recomendado
-            </Badge>
-          )}
-          
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-fade-in">
-            Pacote {pkg.name}
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-gray-200 mb-2">
-            {pkg.subtitle}
-          </p>
-          
-          <p className="text-lg text-gray-300 mb-8 italic">
-            {pkg.tagline}
-          </p>
-          
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 inline-block mb-6">
-            <p className="text-sm text-gray-200 mb-2">Investimento</p>
-            <p className="text-5xl font-bold mb-2">{pkg.price}</p>
-            <p className="text-sm text-gray-300">
-              Slide extra: {pkg.extraSlidePrice}/slide
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-background/95 backdrop-blur-md rounded-3xl shadow-2xl p-8 md:p-12 lg:p-16 text-center">
+            {pkg.recommended && (
+              <Badge className="mb-4 bg-primary text-primary-foreground px-5 py-2 text-sm font-semibold rounded-full">
+                ⭐ Recomendado
+              </Badge>
+            )}
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate-fade-in text-foreground">
+              Pacote {pkg.name}
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-foreground/80 mb-2 font-medium">
+              {pkg.subtitle}
+            </p>
+            
+            <p className="text-lg text-muted-foreground mb-8 italic">
+              {pkg.tagline}
+            </p>
+            
+            <div className="bg-accent rounded-2xl p-8 inline-block mb-6 shadow-lg">
+              <p className="text-sm text-muted-foreground mb-2 font-medium">Investimento</p>
+              <p className="text-5xl font-bold mb-2 text-foreground">{pkg.price}</p>
+              <p className="text-sm text-muted-foreground">
+                Slide extra: <span className="font-semibold text-foreground">{pkg.extraSlidePrice}/slide</span>
+              </p>
+            </div>
+            
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed">
+              {pkg.shortDescription}
             </p>
           </div>
-          
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
-            {pkg.shortDescription}
-          </p>
         </div>
       </div>
     </section>
